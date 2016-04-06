@@ -1,19 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:weightSum="1">
 
+
+    <Button
+        android:layout_width="@dimen/abc_config_prefDialogWidth"
+        android:layout_height="55dp"
+        android:text="ADD NEW DEVICE"
+        android:id="@+id/addNewDeviceBtn"
+        android:layout_weight="0.76"
+        android:layout_marginTop="120dp"
+        android:background="#33cc00"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="25dp"
+        android:textColor="#ffffff"
+        />
+
+    <Button
+        android:layout_width="@dimen/abc_config_prefDialogWidth"
+        android:layout_height="55dp"
+        android:text="ADD NEW ROOM"
+        android:id="@+id/addNewRoomBtn"
+        android:layout_weight="0.76"
+        android:layout_marginTop="50dp"
+        android:background="#33cc00"
+        android:textSize="25dp"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/addNewDeviceBtn"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="@dimen/abc_config_prefDialogWidth"
+        android:layout_height="55dp"
+        android:text="HELP"
+        android:id="@+id/helpBtn"
+        android:layout_weight="0.76"
+        android:layout_marginTop="50dp"
+        android:background="#33cc00"
+        android:textSize="25dp"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/addNewRoomBtn"
+        android:layout_centerHorizontal="true" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tab 3"
-        android:id="@+id/textView2"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="PereGreen Energy Ltd"
+        android:id="@+id/companyTagName"
         android:textAlignment="center"
-        android:layout_gravity="center_vertical"
-        android:textIsSelectable="false"
-        android:textSize="30dp"
-        android:paddingLeft="20dp"
-        android:textColor="#000000" />
-
-
-</LinearLayout>
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dp" />
+</RelativeLayout>
