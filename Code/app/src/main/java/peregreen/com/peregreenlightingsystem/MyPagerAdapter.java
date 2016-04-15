@@ -32,11 +32,8 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
                 ReportTab t4 = new ReportTab();
                 return t4;
             case 4:
-                HelpTab t5 = new HelpTab();
+                ExitTab t5 = new ExitTab();
                 return t5;
-            case 5:
-                ExitTab t6 = new ExitTab();
-                return t6;
 
         }
         return null;
@@ -44,7 +41,7 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 6;
+        return 5;
     }//set the number of tabs
 
     @Override
@@ -63,9 +60,6 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
 
                 return "REPORT";
             case 4:
-
-                return "HELP";
-            case 5:
 
                 return "EXIT";
         }

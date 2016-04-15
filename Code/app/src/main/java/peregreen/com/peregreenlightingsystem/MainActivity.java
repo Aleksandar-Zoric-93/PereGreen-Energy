@@ -1,30 +1,47 @@
 package peregreen.com.peregreenlightingsystem;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends FragmentActivity {
 
     ViewPager pager;
     PagerTabStrip tab_strp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         MyPagerAdapter manager = new MyPagerAdapter(getSupportFragmentManager());
-        pager=(ViewPager)findViewById(R.id.pager);
+        pager = (ViewPager) findViewById(R.id.pager);
 
         pager.setAdapter(manager);
-        tab_strp=(PagerTabStrip)findViewById(R.id.tab_strip);
+        tab_strp = (PagerTabStrip) findViewById(R.id.tab_strip);
         tab_strp.setTextColor(Color.WHITE);
         //   tab_strp.setTextSize(14,14);
         // tab_strp.setTabIndicatorColor(Color.WHITE);
+    }
+
+    public void changeLayout(View view){
+        Button button = (Button) findViewById(R.id.addNewDeviceBtn);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Choose the layout where the buttons is located
+                setContentView(R.layout.options_tab);
+                Intent intent = new Intent(MainActivity.this, AddDeviceActivity.class);
+                startActivity(intent);
+
+            }
+        });
     }
 
 
@@ -34,6 +51,7 @@ public class MainActivity extends FragmentActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -49,6 +67,11 @@ public class MainActivity extends FragmentActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
+
+
 
 
 
