@@ -49,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="PereGreen Energy Ltd"
+        android:text="@string/companyTag"
         android:id="@+id/companyTagName"
         android:textAlignment="center"
         android:layout_alignParentBottom="true"
