@@ -16,7 +16,7 @@
         android:layout_centerHorizontal="true"
         android:textSize="25dp"
         android:textColor="#ffffff"
-        android:onClick="changeLayout"
+        android:onClick="changeLayoutForAddDeviceOption"
         />
 
     <Button
@@ -30,7 +30,8 @@
         android:textSize="25dp"
         android:textColor="#ffffff"
         android:layout_below="@+id/addNewDeviceBtn"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="changeLayoutForAddRoomOption"/>
 
     <Button
         android:layout_width="@dimen/abc_config_prefDialogWidth"

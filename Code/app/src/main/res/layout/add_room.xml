@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="#ffffff"
-    android:weightSum="1">
-
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <EditText
         android:layout_width="320dp"
         android:layout_height="55dp"
-        android:id="@+id/deviceName"
+        android:id="@+id/roomName"
         android:background="#c0c0c0"
         android:layout_marginTop="30dp"
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="@dimen/abc_dialog_padding_material"
-        android:hint="DEVICE NAME"
+        android:hint="ROOM NAME"
         android:layout_weight="0.73"
         android:editable="true"
         android:elegantTextHeight="false"
@@ -27,38 +26,38 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/listOfDevices"
-        android:layout_marginTop="30dp"
-        android:layout_below="@+id/deviceName"
+        android:id="@+id/listOfDevicesToAddInRoom"
         android:clickable="true"
         android:divider="#33cc00"
         android:dividerHeight="2dp"
         android:drawSelectorOnTop="false"
         android:fastScrollAlwaysVisible="false"
         android:headerDividersEnabled="true"
-        android:choiceMode="singleChoice"
+        android:choiceMode="multipleChoice"
         android:contextClickable="true"
         tools:listitem="@android:layout/simple_list_item_1"
-        android:layout_marginBottom="140dp"
         android:listSelector="#33cc00"
         android:visibility="visible"
         android:background="#ffffff"
-        android:layout_alignRight="@+id/deviceName"
-        android:layout_alignEnd="@+id/deviceName"
-        android:layout_alignLeft="@+id/deviceName"
-        android:layout_alignStart="@+id/deviceName" />
+        android:layout_below="@+id/roomName"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="140dp"
+        android:layout_alignRight="@+id/roomName"
+        android:layout_alignEnd="@+id/roomName"
+        android:layout_alignLeft="@+id/roomName"
+        android:layout_alignStart="@+id/roomName" />
 
     <Button
         android:layout_width="@dimen/abc_config_prefDialogWidth"
         android:layout_height="55dp"
         android:text="CONFIRM"
-        android:id="@+id/confirmBtn"
+        android:id="@+id/confirmRoomBtn"
         android:layout_weight="0.76"
         android:background="#33cc00"
         android:textSize="25dp"
         android:textColor="#ffffff"
-        android:layout_marginBottom="22dp"
-        android:layout_above="@+id/companyTagName"
+        android:layout_marginBottom="35dp"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -66,9 +65,10 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/companyTag"
-        android:id="@+id/companyTagName"
+        android:id="@+id/textView3"
         android:textAlignment="center"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
 
 </RelativeLayout>

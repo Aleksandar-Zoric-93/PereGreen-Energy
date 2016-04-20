@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 
 public class MainActivity extends FragmentActivity {
 
@@ -30,7 +31,7 @@ public class MainActivity extends FragmentActivity {
         // tab_strp.setTabIndicatorColor(Color.WHITE);
     }
 
-    public void changeLayout(View view){
+    public void changeLayoutForAddDeviceOption(View view){
         Button button = (Button) findViewById(R.id.addNewDeviceBtn);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +43,22 @@ public class MainActivity extends FragmentActivity {
 
             }
         });
+    }
+
+    public void changeLayoutForAddRoomOption(View view)
+    {
+        Button button = (Button) findViewById(R.id.addNewRoomBtn);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Choose the layout where the buttons is located
+                setContentView(R.layout.options_tab);
+                Intent intent = new Intent(MainActivity.this, AddRoomActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
     }
 
 
@@ -67,6 +84,7 @@ public class MainActivity extends FragmentActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 
 
 
