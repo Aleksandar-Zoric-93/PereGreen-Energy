@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".AddDeviceActivity"/>
         <activity android:name=".AddRoomActivity"/>
+        <activity android:name=".HelpActivity"/>
+
     </application>
 
 </manifest>
