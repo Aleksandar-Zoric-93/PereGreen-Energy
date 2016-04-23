@@ -32,9 +32,6 @@ public class SwipeTabAdapter extends FragmentPagerAdapter {
             case 3:
                 ReportTab t4 = new ReportTab();
                 return t4;
-            case 4:
-                ExitTab t5 = new ExitTab();
-                return t5;
 
         }
         return null;
@@ -63,9 +60,6 @@ public class SwipeTabAdapter extends FragmentPagerAdapter {
             case 3:
 
                 return "REPORT";
-            case 4:
-
-                return "EXIT";
         }
         return null;
     }
